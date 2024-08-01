@@ -17,6 +17,10 @@
           <font-awesome-icon icon="fa-solid fa-envelope" />
           Contact
         </router-link>
+        <router-link to="/map" class="nav-item">
+          <font-awesome-icon icon="fa-solid fa-map-marked-alt" />
+          Map
+        </router-link>
       </div>
       <input type="color" class="color-picker" @input="pickColor" />
     </header>
@@ -43,12 +47,25 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.30)),url(/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .header {
   text-align: center;
   font-size: 18px;
-  background-color: #333;
+  background-color: #43b5f3;
   padding: 20px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .top-icon {

@@ -10,6 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base: "/Portfolio/",
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -18,5 +19,4 @@ export default defineConfig({
   build: {
     outDir: "docs"
   },
-  base: "Portfolio"
 })

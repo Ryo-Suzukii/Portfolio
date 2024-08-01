@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router'
 import './assets/tailwind.css'
 
 /* import the fontawesome core */
@@ -18,4 +19,5 @@ library.add(faTwitter, faArrowUpRightFromSquare, faAddressCard, faHouseUser, faE
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
+.use(router)
 .mount('#app')

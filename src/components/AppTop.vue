@@ -1,7 +1,7 @@
 <template>
   <div id="top">
-    <h1>Top Section</h1>
-    <!-- コンテンツをここに追加 -->
+    <h1>ﾈｺﾁﾔﾝ</h1>
+    
   </div>
 </template>
 
@@ -9,5 +9,11 @@
 </script>
 
 <style scoped>
-/* スタイルをここに追加 */
+#top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
 </style>

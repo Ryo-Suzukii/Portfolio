@@ -1,5 +1,5 @@
 <template>
-  <div id="profile">
+  <div id="contact">
     <h1>Contact Section</h1>
     <!-- コンテンツをここに追加 -->
   </div>
@@ -9,5 +9,11 @@
 </script>
 
 <style scoped>
-/* スタイルをここに追加 */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
 </style>

@@ -9,5 +9,11 @@
 </script>
 
 <style scoped>
-/* スタイルをここに追加 */
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
 </style>

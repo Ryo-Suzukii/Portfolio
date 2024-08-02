@@ -1,22 +1,27 @@
 <template>
   <div class="map-wrapper">
-    <div class="map-controls">
-      <label for="style-select">Map Style:</label>
-      <select id="style-select" v-model="selectedStyle" @change="updateMapStyle">
-        <option v-for="style in styles" :key="style.value" :value="style.value">
-          {{ style.label }}
-        </option>
-      </select>
-    </div>
+    <VueDraggableNext class="map-controls" :options="{ draggable: '.draggable' }">
+      <div class="draggable" style="display: flex; flex-direction: column;">
+        <label for="style-select">Map Style:</label>
+        <select id="style-select" v-model="selectedStyle" @change="updateMapStyle">
+          <option v-for="style in styles" :key="style.value" :value="style.value">
+            {{ style.label }}
+          </option>
+        </select>
+      </div>
+    </VueDraggableNext>
     <div id="map" class="map-container"></div>
   </div>
 </template>
 
 <script>
 import mapboxgl from 'mapbox-gl';
+import { VueDraggableNext } from 'vuedraggable';
 
 export default {
-  name: 'Map',
+  components: {
+    VueDraggableNext
+  },
   data() {
     return {
       map: null,
@@ -64,6 +69,8 @@ export default {
   margin-bottom: 10px;
   position: relative;
   z-index: 10;
+  margin-top: 150px;
+  font-size: 30px;
 }
 
 .map-controls {
@@ -74,10 +81,12 @@ export default {
   padding: 10px;
   border-radius: 4px;
   font-size: large;
+  cursor: move;
 }
 
 .map-container {
   width: 100%;
   height: 100vh;
 }
+
 </style>

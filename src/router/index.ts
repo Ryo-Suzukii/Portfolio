@@ -7,6 +7,7 @@ import Map from '../components/AppMap.vue';
 
 const routes = [
   { path: '/', component: Top },
+  { path: '/portfolio', component: Top },
   { path: '/profile', component: Profile },
   { path: '/works', component: Works },
   { path: '/contact', component: Contact },

@@ -22,7 +22,7 @@
           Map
         </router-link>
       </div>
-      <input type="color" class="color-picker" @input="pickColor" />
+      <input type="color" class="color-picker" @input="pickColor($event)" />
     </header>
     
     <router-view />
@@ -32,9 +32,10 @@
 <script lang="ts">
   export default {
     methods: {
-      pickColor(event: InputEvent) {
+      pickColor(event: Event) {
         const color = (event.target as HTMLInputElement).value;
-        document.querySelector('.header')!.style.backgroundColor = color;
+        const header = document.querySelector('.header') as HTMLElement;
+        header.style.backgroundColor = color;
       },
     },
   };
